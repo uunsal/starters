@@ -1,0 +1,36 @@
+<nb-layout>
+  <nb-layout-header fixed>DASHBOARD
+    <nb-actions>
+      <nb-action icon="home-outline" class="home" href="/book"></nb-action>
+      <nb-action icon="search-outline" class="deneme1"></nb-action>
+      <nb-action icon="edit-outline" class="deneme2">
+
+      </nb-action>
+<!--      <nb-action icon="home-outline"></nb-action>-->
+<!--      <nb-action icon="search-outline"></nb-action>-->
+<!--      <nb-action icon="edit-outline"></nb-action>-->
+    </nb-actions>
+  </nb-layout-header>
+
+  <nb-sidebar>Sidebar Content
+    <nb-list>
+      <nb-list-item *ngFor="let fruit of fruits">
+        <a style="color: #000;text-decoration: none;" href={{fruit.link}}>{{ fruit.fruit }}</a>
+      </nb-list-item>
+    </nb-list>
+  </nb-sidebar>
+
+  <nb-layout-column>
+    <nb-card accent="info">
+      <nb-card-header>Nebula</nb-card-header>
+      <nb-card-body>
+        <button nbButton status="primary">Primary</button>
+        <button nbButton status="success">Success</button>
+        <button nbButton status="info">Info</button>
+        <button nbButton status="warning">Warning</button>
+        <button nbButton status="danger">Danger</button>
+        <router-outlet></router-outlet>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>
